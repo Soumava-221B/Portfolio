@@ -3,6 +3,7 @@ import { Card } from "@/components/Card";
 import StarIcon from '@/assets/icons/star.svg';
 import bookImage from '@/assets/images/book-cover.png';
 import Image from "next/image";
+import { TechIcon } from "@/components/TechIcon";
 import JavaScriptIcon from '@/assets/icons/square-js.svg';
 import HTMLIcon from '@/assets/icons/html5.svg';
 import CssIcon from '@/assets/icons/css3.svg';
@@ -13,27 +14,27 @@ import GithubIcon from '@/assets/icons/github.svg';
 const toolboxItems = [
   {
     title: "JavaScript",
-    icon: <JavaScriptIcon />,
+    iconType: JavaScriptIcon,
   },
   {
     title: "HTML5",
-    icon: <HTMLIcon />,
+    iconType: HTMLIcon,
   },
   {
     title: "CSS3",
-    icon: <CssIcon />,
+    iconType: CssIcon,
   },
   {
     title: "React",
-    icon: <ReactIcon />,
+    iconType: ReactIcon,
   },
   {
     title: "Chrome",
-    icon: <ChromeIcon />,
+    iconType: ChromeIcon,
   },
   {
     title: "Github",
-    icon: <GithubIcon />,
+    iconType: GithubIcon,
   },
 ];
 
@@ -63,7 +64,7 @@ export const AboutSection = () => {
           <div>
               {toolboxItems.map(item => (
                 <div key={item.title}>
-                  <span>{item.icon}</span>
+                  <TechIcon component={item.iconType} />
                   <span>{item.title}</span>
                 </div>
               ))}
