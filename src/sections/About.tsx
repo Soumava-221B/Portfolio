@@ -1,6 +1,5 @@
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
-import StarIcon from "@/assets/icons/star.svg";
 import bookImage from "@/assets/images/book-cover.png";
 import Image from "next/image";
 import { TechIcon } from "@/components/TechIcon";
@@ -13,6 +12,7 @@ import GithubIcon from "@/assets/icons/github.svg";
 import mapImage from "@/assets/images/map.png";
 import smileMemoji from "@/assets/images/memoji-smile.png";
 import { CardHeader } from '../components/CardHeader';
+import { ToolboxItems } from "@/components/ToolboxItems";
 
 const toolboxItems = [
   {
@@ -97,14 +97,7 @@ export const AboutSection = () => {
               description="Explore the technologies and tools I use to craft exceptional
                 digital experiences."
             />
-            <div>
-              {toolboxItems.map((item) => (
-                <div key={item.title}>
-                  <TechIcon component={item.iconType} />
-                  <span>{item.title}</span>
-                </div>
-              ))}
-            </div>
+            <ToolboxItems items={toolboxItems} />
           </Card>
           <Card>
             <CardHeader
