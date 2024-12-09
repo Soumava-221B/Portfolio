@@ -96,10 +96,10 @@ export const AboutSection = () => {
               title="My Toolbox"
               description="Explore the technologies and tools I use to craft exceptional
                 digital experiences."
-                className="px-6 pt-6"
+              className="px-6 pt-6"
             />
-            <ToolboxItems items={toolboxItems} />
-            <ToolboxItems items={toolboxItems} />
+            <ToolboxItems items={toolboxItems} className="mt-6" />
+            <ToolboxItems items={toolboxItems} className="mt-6" />
           </Card>
           <Card>
             <CardHeader
